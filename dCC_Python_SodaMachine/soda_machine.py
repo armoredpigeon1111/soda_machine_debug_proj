@@ -10,13 +10,13 @@ class SodaMachine:
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
         coins = Coin()
         for index in range(8):
-        self.register.append(coins.Quarter())
-        for index in range(10):
-        self.register.append(coins.Dime())
-        for index in range(20):
-        self.register.append(coins.Nickel())
-        for index in range(50):
-        self.register.append(coins.Penny())
+            self.register.append(coins.Quarter())
+            for index in range(10):
+                self.register.append(coins.Dime())
+            for index in range(20):
+                self.register.append(coins.Nickel())
+            for index in range(50):
+                self.register.append(coins.Penny())
 
     def fill_inventory(self):
         """Method will fill SodaMachine's cans list with certain amounts of each can when called."""
