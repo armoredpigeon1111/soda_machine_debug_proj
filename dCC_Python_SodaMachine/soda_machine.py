@@ -2,6 +2,7 @@ import cans
 import coins
 import user_interface
 
+
 class SodaMachine:
     def __init__(self):
         self.register = []
@@ -45,9 +46,9 @@ class SodaMachine:
 
         selected_soda = self.get_inventory_soda(selected_soda_name)
 
-        customer_payment = customer.gather_coins_from_wallet(selected_soda_name)
+        customer_payment = customer.gather_coins_from_wallet(selected_soda) #changed to selected soda
 
-        self.calculate_transaction(customer_payment, selected_soda_name, customer)
+        self.calculate_transaction(customer_payment, selected_soda, customer) #changed selected_soda_name to selected_soda
 
         user_interface.output_text("Transaction complete")
 
