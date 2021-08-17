@@ -1,5 +1,6 @@
 from coins import Coin
 from cans import Can
+import user_interface
 
 class SodaMachine:
     def __init__(self):
