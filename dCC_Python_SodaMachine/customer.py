@@ -3,9 +3,11 @@ from backpack import Backpack
 import user_interface
 
 class Customer:
-    def __init__(self):
+    def __init__(self): 
+
         self.wallet = Wallet()
         self.backpack = Backpack()
+
 
     def gather_coins_from_wallet(self, selected_soda):
         """Method allowing user to choose coins from wallet for payment"""

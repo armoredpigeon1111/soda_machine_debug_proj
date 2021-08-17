@@ -3,12 +3,12 @@ from soda_machine import SodaMachine
 import user_interface
 
 class Simulation:
-    def __init__(self):
+    def __init__(self): 
         pass
 
     def run_simulation(self):
         """The central method called in main.py."""
-        customer = Customer()
+        customer = Customer() 
         soda_machine = SodaMachine()
         will_proceed = False
         while will_proceed:

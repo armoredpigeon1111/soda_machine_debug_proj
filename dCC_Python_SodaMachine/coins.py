@@ -1,5 +1,5 @@
 class Coin:
-    def __init__(self, name, value):
+    def __init__(self, name, value): 
         self.value = value
         self.name = name
 
