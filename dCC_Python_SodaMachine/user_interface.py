@@ -106,8 +106,8 @@ def get_unique_can_names(inventory):
         if can.name in previous_names:
             continue
         else:
-            unique_cans.append(can) #removed .name
-            previous_names.append(can.name) #removed .name
+            unique_cans.append(can)
+            previous_names.append(can.name)
     return unique_cans
 
 
