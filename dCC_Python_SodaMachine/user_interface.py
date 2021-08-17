@@ -74,7 +74,7 @@ def soda_selection(inventory):
         print("Please choose from the following options:")
         i = 1
         for can in soda_options:
-            print(f'\n\tEnter -{i}- for {can} : ${can.price}')
+            print(f'\n\tEnter -{i}- for {can.name} : ${can.price}')
             i += 1
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
@@ -106,7 +106,7 @@ def get_unique_can_names(inventory):
         if can.name in previous_names:
             continue
         else:
-            unique_cans.append(can.name)
+            unique_cans.append(can)
             previous_names.append(can.name)
     return unique_cans
 
