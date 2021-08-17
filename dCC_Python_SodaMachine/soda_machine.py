@@ -1,35 +1,35 @@
-from coins import Coin
-from cans import Can
+import cans
+import coins
 import user_interface
 
 class SodaMachine:
     def __init__(self):
         self.register = []
         self.inventory = []
-        self.coins = Coin() #added
-        self.cans = Can()  #added
+        # self.coins = Coin() #added
+        # self.cans = Can()  #added
 
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
       
         for index in range(8):
-            self.register.append(self.coins.Quarter()) #added selfs for all these
+            self.register.append(coins.Quarter()) #added selfs for all these
             for index in range(10):
-                self.register.append(self.coins.Dime())
+                self.register.append(coins.Dime())
             for index in range(20):
-                self.register.append(self.coins.Nickel())
+                self.register.append(coins.Nickel())
             for index in range(50):
-                self.register.append(self.coins.Penny())
+                self.register.append(coins.Penny())
 
     def fill_inventory(self):
         """Method will fill SodaMachine's cans list with certain amounts of each can when called."""
        
         for index in range(10):
-            self.inventory.append(self.cans.Cola()) #add selfs for all these
+            self.inventory.append(cans.Cola()) #add selfs for all these
         for index in range(10):
-            self.inventory.append(self.cans.OrangeSoda())
+            self.inventory.append(cans.OrangeSoda())
         for index in range(10):
-            self.inventory.append(self.cans.RootBeer())
+            self.inventory.append(cans.RootBeer())
 
     def begin_transaction(self, customer):
         """Method is complete. Initiates purchase if user decides to proceed. No errors."""
@@ -100,7 +100,7 @@ class SodaMachine:
     def get_coin_from_register(self, coin_name):
         """Removes and returns a coin from register"""
         for coin in self.register:
-            if coin.name == "coin_name":
+            if coin.name == coin_name:
                 self.register.remove(coin)
                 return coin
         return None
@@ -108,7 +108,7 @@ class SodaMachine:
     def register_has_coin(self, coin_name):
         """Searches register for a type of coin, returns True if coin is found"""
         for coin in self.register:
-            if coin.name == "coin_name":
+            if coin.name == coin_name:
                 return True
         return False
 
