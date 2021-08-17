@@ -48,7 +48,7 @@ def display_welcome():
 
 def output_text(text):
     """User input method that will print to console any string passed in as an argument"""
-    print("text")
+    print(text) #Removed quotes around text
 
 
 def clear_console():
@@ -74,7 +74,7 @@ def soda_selection(inventory):
         print("Please choose from the following options:")
         i = 1
         for can in soda_options:
-            print(f'\n\tEnter -{i}- for {can} : ${can.price}')
+            print(f'\n\tEnter -{i}- for {can.name} : ${can.price}')
             i += 1
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
@@ -106,8 +106,8 @@ def get_unique_can_names(inventory):
         if can.name in previous_names:
             continue
         else:
-            unique_cans.append(can.name)
-            previous_names.append(can.name)
+            unique_cans.append(can) #removed .name
+            previous_names.append(can.name) #removed .name
     return unique_cans
 
 
