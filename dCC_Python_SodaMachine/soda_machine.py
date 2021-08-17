@@ -6,6 +6,8 @@ class SodaMachine:
     def __init__(self):
         self.register = []
         self.inventory = []
+        self.fill_inventory()
+        self.fill_register()
         # self.coins = Coin() #added
         # self.cans = Can()  #added
 
@@ -13,7 +15,7 @@ class SodaMachine:
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
       
         for index in range(8):
-            self.register.append(coins.Quarter()) #added selfs for all these
+            self.register.append(coins.Quarter()) 
             for index in range(10):
                 self.register.append(coins.Dime())
             for index in range(20):
@@ -25,7 +27,7 @@ class SodaMachine:
         """Method will fill SodaMachine's cans list with certain amounts of each can when called."""
        
         for index in range(10):
-            self.inventory.append(cans.Cola()) #add selfs for all these
+            self.inventory.append(cans.Cola()) 
         for index in range(10):
             self.inventory.append(cans.OrangeSoda())
         for index in range(10):
