@@ -9,7 +9,7 @@ class SodaMachine:
 
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
-        coins = Coin()
+        coins = Coin() #added this
         for index in range(8):
             self.register.append(coins.Quarter())
             for index in range(10):
@@ -21,7 +21,7 @@ class SodaMachine:
 
     def fill_inventory(self):
         """Method will fill SodaMachine's cans list with certain amounts of each can when called."""
-        cans = Can()
+        cans = Can() #added this
         for index in range(10):
             self.inventory.append(cans.Cola())
         for index in range(10):
@@ -133,7 +133,7 @@ class SodaMachine:
         """Re-adds a remove can back to inventory upon unsuccessful purchase attempt"""
         self.inventory.append(chosen_soda)
 
-    def deposit_coins_into_register(self, coin_list):
+    def deposit_coins_into_register(self, coins_list):
         """Takes in list of coins as argument, adds each coin from list to the register"""
         for coin in coins_list:
             self.register.append(coins_list)
