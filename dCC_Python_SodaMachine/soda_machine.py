@@ -116,6 +116,7 @@ class SodaMachine:
 
     def calculate_coin_value(self, coin_list):
         """Takes in a list of coins, returns the monetary value of list."""
+        total_value = 0
         for coin in coin_list:
             total_value += coin.value
         return round(total_value, 2)
