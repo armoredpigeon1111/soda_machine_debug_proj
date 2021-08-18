@@ -9,8 +9,6 @@ class SodaMachine:
         self.inventory = []
         self.fill_inventory()
         self.fill_register()
-        # self.coins = Coin() #added
-        # self.cans = Can()  #added
 
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
